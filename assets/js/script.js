@@ -42,6 +42,9 @@ cityFormEl.on('submit', function(event) {
     storeCities();
     renderCities();
 
+    searchApiCurrent(citiesText);
+    searchApiForecast(citiesText);
+
 });
 
 function renderCities() {
@@ -58,18 +61,31 @@ function renderCities() {
         cityButton.addClass('btn-block');
         cityButton.addClass('mt-1');
         cityAppenderEl.append(cityButton);
+
+        cityButton.on("click", searchAgain);
+
     }
 }
 //end city history code
 
+function searchAgain(event){
+var pastCity = $(event.target).text();
 
-cityFormEl.on('submit', function(event) {
-    event.preventDefault();
+if(pastCity) {
+    searchApiCurrent(pastCity);
+    searchApiForecast(pastCity);
+}
 
-    var cityName= cityInput.val();
-    searchApiCurrent(cityName);
-    searchApiForecast(cityName);
-});
+}
+
+
+// cityFormEl.on('submit', function(event) {
+//     event.preventDefault();
+
+//     var cityName= cityInput.val();
+//     searchApiCurrent(cityName);
+//     searchApiForecast(cityName);
+// });
 
 function searchApiCurrent(cityName) {
     
@@ -80,14 +96,22 @@ function searchApiCurrent(cityName) {
     }
   
 
-    fetch(queryUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data)
-    })};
+    // $.getJSON(queryUrl, (data) => {
+    //     console.log(data);
+    // }
 
+    $.ajax({
+    	url: queryUrl,
+        dataType: 'json',
+    	success: function(data){ 
+    	  console.log(data);
+    	},
+    	error: function(){
+    		alert("There was an error.");
+    	}
+    });
+
+}
 
 
 
@@ -98,11 +122,22 @@ function searchApiCurrent(cityName) {
           + '&units=imperial&appid=478e401a93735bdfa0c38415c842b721';
         }
       
+        
+    // $.getJSON(queryUrl, (data) => {
+    //     console.log(data);
+    // }
+
     
-        fetch(queryUrl)
-        .then(function (response) {
-          return response.json();
-        })
-        .then(function (data) {
-          console.log(data)
-        })};
+        $.ajax({
+            url: queryUrl,
+            dataType: 'json',
+            success: function(data){ 
+         console.log(data);
+
+            },
+            error: function(){
+                alert("There was an error.");
+            }
+        });
+
+    }
