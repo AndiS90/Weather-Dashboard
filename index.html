@@ -16,7 +16,7 @@
         <h1 class="bg-info text-white text-center py-2">Weather Dashboard</h1>
     </nav>
     <div class=" d-flex flex-wrap flex-row">
-        <section class="col-sm-2 col-md-2 col-lg-2 justify-self-stretch" style="height: 800px;">
+        <section class="col-2 justify-self-stretch" style="height: 800px;">
             <div >
                 <form class= "border-bottom border-secondary border-2" id="city-form">
                     <div class="form-group px-2 ">
@@ -29,12 +29,12 @@
                         <button type="submit" class="btn btn-primary btn-lg btn-block my-2 " id="searchBtn">Search</button>
                     </div>
                 </form>
-                <div class="card mx-2 mt-2" style="width: 18rem;">
+                <div class="card mx-2 mt-2">
                     <div class="card-header text-center bg-dark text-white">
                         City History
                     </div>
                     <div class="btn-group-vertical justify-items-center" id="cityAppender">
-                        <button type="button" class="btn btn-secondary btn-block">RandomCityFiller</button>
+                        <!-- <button type="button" class="btn btn-secondary btn-block">RandomCityFiller</button> -->
                     </div>
                 </div>
             </div>
@@ -53,7 +53,7 @@
             <section class="align-self-end">
                 <!-- <section class="d-flex-block align-self-end col-sm-10" > -->
                 <h4>5-Day Forecast:</h4>
-                <div class="row justify-content-around">
+                <!-- <div id='forecast' class="row justify-content-around">
 
                     <div class="col-sm-2">
                         <div class="card bg-light mb-3" style="max-width: 18rem;">
@@ -130,7 +130,7 @@
                         </div>
                     </div>
 
-                </div>
+                </div> -->
 
 
             </section>
@@ -149,6 +149,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
     </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
   <script type="text/javascript" src="./assets/js/script.js"></script>
 
 </body>
