@@ -198,7 +198,7 @@ function setUV(lat, lon){
         var forecast= $('#forecast');
      
 
-      for(i=0; i<41; i++){
+      for(i=0; i<40; i++){
         while(i%8==0) {
         var iconcode =  data.list[i].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
