@@ -4,6 +4,7 @@ var searchBtnEl = $('#searchBtn');
 var cityAppenderEl = $('#cityAppender')
 var cityFormEl = $('#city-form');
 var currentCity = $('#currentCity');
+var forecast = $('#forecast');
 var today = moment().format('MM/DD/YYYY');
 
 //this section pulls the stored city history and sets it when entered
@@ -179,6 +180,8 @@ function setUV(lat, lon) {
 
 function searchApiForecast(cityName) {
 
+    forecast.html('');
+
     if (cityName) {
         var queryUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName +
             '&units=imperial&appid=478e401a93735bdfa0c38415c842b721';
@@ -195,8 +198,9 @@ function searchApiForecast(cityName) {
         dataType: 'json',
         success: function (data) {
             console.log(data);
-            var forecast = $('#forecast');
+     
 
+           
 
             for (i = 0; i < 40; i++) {
                if (i % 8 == 0) {
