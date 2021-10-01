@@ -6,7 +6,7 @@ Basic Weather Dashboard, with City Input
 <p> My personal objective with this project was to create a weather forecast page that presents the current forecast and a small 5-day forecast for any city entered. Also the current day's uv index is presented in either green, yellow, or red depending on the safety of being out in the sun that day.  
 </p>
 
-<p>First, I created a basic html and formatted its css with bootstrap to a degree of presentability and functionality to present the data that I wanted to show. I began creating the functionality of the page by pulling specific elements from the html and setting them as variables. Through multiple api calls using jquery's ajax, I was able pull data from the open weather api that I could manipulate to show on the html page through a series of functions and a loop.
+<p>First, I created a basic html and formatted its css with bootstrap to a degree of presentability and functionality to present the data that I wanted to show. I began creating the functionality of the page by pulling specific elements from the html and setting them as variables. Through multiple api calls using jquery's ajax, I was able pull data from the open weather api that I could manipulate to show on the html page through a series of functions and a loop with conditionals.
 </p>
 
 <p>
@@ -25,12 +25,16 @@ Basic Weather Dashboard, with City Input
 - [Weather-Dashboard-Repository](https://github.com/AndiS90/Weather-Dashboard)
 <br>
 
-![Screenshot](./assets/images/screenshot.png)
+![Screenshot](./assets/screenshots/screenshot.gif)
 
 <br>
 
 ## **Credits**
  
+- [JQuery API Docs](https://api.jquery.com/)
+- [W3schools jQuery Ajax Reference](https://www.w3schools.com/jquery/jquery_ajax_load.asp)
+-[Open Weather Map Api Docs](https://openweathermap.org/api)
+
 <br>
 
 ### [License](.License.txt)
