@@ -37,6 +37,6 @@ Basic Weather Dashboard, with City Input
 
 <br>
 
-### [License](.License.txt)
+### [License](./LICENSE)
 
 <br>
