@@ -5,7 +5,9 @@ var cityAppenderEl = $('#cityAppender')
 var cityFormEl = $('#city-form');
 var currentCity = $('#currentCity');
 var forecast = $('#forecast');
-var today = moment().format('MM/DD/YYYY');
+var today = moment().format('dddd MM/DD/YYYY');
+
+
 
 //this section pulls the stored city history and sets it when entered
 function init() {
@@ -208,21 +210,21 @@ function searchApiForecast(cityName) {
                     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
                     var icon = $('<img>').attr('src', iconurl);
 
-                    var reformatDate = moment(data.list[i+3].dt_txt, "YYYY-MM-DD HH:mm:ss").format("MM-DD-YYYY");
-                    var container = $('<div>').addClass('col-sm-2');
-                    forecast.append(container);
+                    var reformatDate = moment(data.list[i+3].dt_txt, "YYYY-MM-DD HH:mm:ss").format("dddd MM-DD-YYYY");
+                    // var container = $('<div>');
+                    // forecast.append(container);
 
                     var card = $('<div>').addClass('card')
-                        .addClass('bg-light').addClass('mb-3')
-                        .attr('style', 'max-width:18rem;');
-                    container.append(card);
+                        .addClass('mt-3').addClass('col-lg-2')
+                        .attr('style', 'max-width:25rem;');
+                    forecast.append(card);
 
                     var header = $('<h5>').addClass('card-header')
                         .text(reformatDate);
                     card.append(header);
 
                     var body = $('<div>').addClass('card-body');
-                    header.append(body);
+                    card.append(body);
 
                     var title = $('<div>').addClass('card-title');
                     body.append(title);
@@ -234,16 +236,16 @@ function searchApiForecast(cityName) {
                     var uList = $('<ul>').addClass('list-group').addClass('list-group-flush');
                     cardText.append(uList);
 
-                    var temp = $('<li>').addClass('list-group-item').addClass('mt-1')
-                        .html('Temp: &nbsp;' + data.list[i+3].main.temp + '°F')
+                    var temp = $('<li>').addClass('list-group-item').addClass('').addClass('text-nowrap')
+                        .html('Temp: &nbsp;' + data.list[i+3].main.temp + ' °F')
                     uList.append(temp);
 
-                    var wind = $('<li>').addClass('list-group-item').addClass('mt-1')
-                        .html('Wind: &nbsp;' + data.list[i+3].wind.speed + 'MPH')
+                    var wind = $('<li>').addClass('list-group-item').addClass('').addClass('text-nowrap')
+                        .html('Wind: &nbsp;' + data.list[i+3].wind.speed + ' MPH')
                     uList.append(wind);
 
-                    var humidity = $('<li>').addClass('list-group-item').addClass('mt-1')
-                        .html('Humidity: &nbsp;' + data.list[i+3].main.humidity + '%')
+                    var humidity = $('<li>').addClass('list-group-item').addClass('').addClass('text-nowrap')
+                        .html('Humidity: &nbsp;' + data.list[i+3].main.humidity + ' %')
                    uList.append(humidity);
 
                 }

@@ -1,0 +1,51 @@
+/*Start Globals Styles*/
+:root {
+--rich-black: #001524ff;
+--ming: #15616dff;
+--blanched-almond: #ffecd1ff;
+--amber-sae-ece: #ff7d00ff;
+--kobe: #78290fff;
+}
+
+nav{
+
+    background-color: var(--rich-black);
+    color: var(--blanched-almond);
+}
+
+body {
+    background-color: var(--ming) !important;
+}
+
+
+
+
+#offcanvasSearch {
+
+    max-width: 80vw;
+}
+
+
+
+.currentCityBox{
+    background-color: var(--blanched-almond);
+}
+
+.searchContainer{
+    background-color: var(--blanched-almond);
+    display: block;
+    height: 100vh;
+}
+
+.mainSearchButton{ 
+    background-color: var(--kobe) !important;
+    color: var(--blanched-almond) !important;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.card .mt-3{
+ 
+    background-color: var(--blanched-almond);
+
+}
