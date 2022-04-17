@@ -236,15 +236,15 @@ function searchApiForecast(cityName) {
                     var uList = $('<ul>').addClass('list-group').addClass('list-group-flush');
                     cardText.append(uList);
 
-                    var temp = $('<li>').addClass('list-group-item').addClass('').addClass('text-nowrap')
+                    var temp = $('<li>').addClass('list-group-item').addClass('')
                         .html('Temp: &nbsp;' + data.list[i+3].main.temp + ' °F')
                     uList.append(temp);
 
-                    var wind = $('<li>').addClass('list-group-item').addClass('').addClass('text-nowrap')
+                    var wind = $('<li>').addClass('list-group-item').addClass('')
                         .html('Wind: &nbsp;' + data.list[i+3].wind.speed + ' MPH')
                     uList.append(wind);
 
-                    var humidity = $('<li>').addClass('list-group-item').addClass('').addClass('text-nowrap')
+                    var humidity = $('<li>').addClass('list-group-item').addClass('')
                         .html('Humidity: &nbsp;' + data.list[i+3].main.humidity + ' %')
                    uList.append(humidity);
 

@@ -15,23 +15,35 @@ nav{
 
 body {
     background-color: var(--ming) !important;
+    font-family: 'Alice', serif !important;
+    font-family: 'Gorditas', cursive !important;
+    font-family: 'Special Elite', cursive !important;
 }
-
-
-
 
 #offcanvasSearch {
 
     max-width: 80vw;
 }
 
-
-
 .currentCityBox{
     background-color: var(--blanched-almond);
 }
 
-.searchContainer{
+.currentCityBox h3{
+    margin: auto;
+    width: 85vw;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+
+.currentCityBox ul li{
+    margin: auto;
+    width: 85vw;
+    margin-bottom: 10px;
+}
+
+.searchContainer {
     background-color: var(--blanched-almond);
     display: block;
     height: 100vh;
@@ -40,12 +52,55 @@ body {
 .mainSearchButton{ 
     background-color: var(--kobe) !important;
     color: var(--blanched-almond) !important;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    width: 90vw;
+    margin: auto;
 }
 
-.card .mt-3{
+
+/* .fiveDay {
+    margin-top:10px;
+    width: 80vw;
+    background-color: var(--kobe) !important;
+    color: var(--blanched-almond);
+   
+} */
+
+
+
+
+.container-fluid{
  
+}
+
+.fiveDay{
+    padding: 10px; 
+    margin-top:10px;
+    width: 100%;
+    background-color: var(--kobe) !important;
+    color: var(--blanched-almond);
+}
+
+
+.card.mt-3.col-lg-2{
+ 
+    background-color: var(--ming) !important;
+    margin-bottom: 10px;
+    }
+
+.card-title{
+    display: flex;
+    flex-flow: column-wrap;
+    justify-content: center;
+}
+
+.card-header{
+    margin-top: 5px;
+    background-color: var(--rich-black) !important;
+}
+
+li.list-group-item{
+
+    width:105%;
     background-color: var(--blanched-almond);
 
 }
